@@ -1,5 +1,0 @@
-{
-  "name": "AI Fitness Coach",
-  "description": "An AI-powered chat assistant for fitness advice, designed to be embedded in a mobile app. Note for developer: For a production app, manage the Gemini API key on a secure backend server instead of client-side to prevent exposure. Also, include clear disclaimers that the AI's advice is not a substitute for professional medical guidance.",
-  "requestFramePermissions": []
-}

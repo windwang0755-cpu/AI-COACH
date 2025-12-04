@@ -1,6 +1,12 @@
+// app/components/MessageBubble.tsx
 import React from 'react';
 import { Message, MessageRole } from '../types';
+import { coachAvatar } from './avatar';
+// We need to import the Image component from Next.js for optimization
+import Image from 'next/image';
 
+// ... (LoadingIndicator, CopyIcon, RegenerateIcon components remain the same)
+// ...
 const LoadingIndicator = () => (
   <div className="flex items-center justify-center space-x-1 p-1">
     <div className="w-1.5 h-1.5 bg-gray-500 rounded-full animate-pulse [animation-delay:-0.3s]"></div>
@@ -35,9 +41,11 @@ const MessageBubble: React.FC<MessageBubbleProps> = ({ message, isLastMessage, i
   return (
     <div className={`flex items-start gap-2.5 ${isUser ? 'justify-end' : ''}`}>
       {isAI && (
-        <img
-          src="https://picsum.photos/seed/aicoach/40/40"
+        <Image
+          src={coachAvatar}
           alt="AI Coach"
+          width={32} // Next.js Image component requires width and height
+          height={32}
           className="w-8 h-8 rounded-full flex-shrink-0"
         />
       )}
